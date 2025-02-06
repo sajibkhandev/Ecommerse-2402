@@ -15,6 +15,8 @@ import Warrenty3 from '../assets/warrenty3.png'
 import PomotionOne from '../assets/Ad_1.jpg'
 import PomotionTwo from '../assets/Ad_2.jpg'
 import PomotionThree from '../assets/Ad_3.png'
+import CommonHeading from '../components/CommonHeading'
+import Cart from '../components/Cart'
 
 
 
@@ -65,6 +67,14 @@ const Home = () => {
 
     </Flex>
 
+  </Container>
+
+  <Container>
+  <CommonHeading className='pb-12' text="New Arrivals"/>
+  </Container>
+
+  <Container>
+    <Cart/>
   </Container>
 
 
