@@ -7,7 +7,7 @@ import { FaHeart } from 'react-icons/fa'
 const Cart = () => {
   return (
     <div className='w-[370px] h-[465px] relative group '>
-        <div className='absolute top-5 left-5 bg-black py-3 px-8 text-white text-base font-dm font-bold'>New</div>
+        <div className='z-10 absolute top-5 left-5 bg-black py-3 px-8 text-white text-base font-dm font-bold'>New</div>
         <div className='w-[370px] h-[370px] relative'>
         <Image className='w-full' src={CartOne}/>
         <div className='absolute -bottom-1/3 left-0 w-full h-1/3 bg-white group-hover:bottom-0 duration-300 opacity-0 group-hover:opacity-100 invisible group-hover:visible'>

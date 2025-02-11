@@ -15,6 +15,7 @@ import Warrenty3 from '../assets/warrenty3.png'
 import PomotionOne from '../assets/Ad_1.jpg'
 import PomotionTwo from '../assets/Ad_2.jpg'
 import PomotionThree from '../assets/Ad_3.png'
+import OfferImage from '../assets/offer.jpg'
 import CommonHeading from '../components/CommonHeading'
 import Cart from '../components/Cart'
 
@@ -69,13 +70,51 @@ const Home = () => {
 
   </Container>
 
+  <section className='pb-20'>
   <Container>
   <CommonHeading className='pb-12' text="New Arrivals"/>
   </Container>
 
   <Container>
+    <Flex className='flex-wrap gap-x-10'>
     <Cart/>
+    <Cart/>
+    <Cart/>
+    <Cart/>
+    </Flex>
   </Container>
+
+  </section>
+
+  <section className='pb-20'>
+  <Container>
+    <Flex className='flex-wrap gap-x-10'>
+    <Cart/>
+    <Cart/>
+    <Cart/>
+    <Cart/>
+    </Flex>
+  </Container>
+
+  </section>
+
+  <Container>
+    <Image className='pb-20' src={OfferImage}/>
+  </Container>
+
+  <section className='pb-20'>
+  <Container>
+    <Flex className='flex-wrap gap-x-10'>
+    <Cart/>
+    <Cart/>
+    <Cart/>
+    <Cart/>
+    </Flex>
+  </Container>
+
+  </section>
+
+
 
 
   </Link>
