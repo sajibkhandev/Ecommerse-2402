@@ -24,8 +24,7 @@ import Cart from '../components/Cart'
 const Home = () => {
   return (
   <>
-  <Navber/>
-  <Sideber/>
+ 
   <Link to='/#'><Image className='w-full' src={BannerImage}/>
   <section className='border-b border-[#F0F0F0]'>
   <Container>
@@ -118,7 +117,7 @@ const Home = () => {
 
 
   </Link>
-  <Footer/>
+ 
   </>
   )
 }
