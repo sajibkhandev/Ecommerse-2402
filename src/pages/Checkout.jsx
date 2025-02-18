@@ -1,9 +1,9 @@
 import React from 'react'
-import Navber from '../layouts/Navber'
+import { Link } from 'react-router-dom';
 import Container from '../components/Container'
 import CommonHeading from '../components/CommonHeading'
 import Flex from '../components/Flex'
-import { MdArrowForwardIos } from "react-icons/md";
+import { FaGreaterThan } from "react-icons/fa6";
 import Button from '../components/Button'
 
 const Checkout = () => {
@@ -12,18 +12,26 @@ const Checkout = () => {
         <section className='pt-[124px] pl-[157px] pb-[170px]'>
           <Container>
             <CommonHeading text='Checkout' className='font-dm font-[700] text-[49px]'/>
-            <div>
-              <Flex className='items-center gap-x-1'>
-                <span className='text-[12px] font-dm font-[400] text-[#6D6D60] cursor-pointer hover:text-primary'>Home</span>
-                <MdArrowForwardIos className='text-[12px] font-dm font-[400] text-[#6D6D60] cursor-pointer' />
-                <span className='text-[12px] font-dm font-[400] text-[#6D6D60] cursor-pointer hover:text-primary'>Checkout</span>
-
-                
-                 
+            <div className='justify-center items-center mb-4'>
+              <Flex className="items-center gap-x-1 text-base text-[#767676] font-dm font-normal">
+              <Link to="/" className="font-dm font-normal hover:text-primary duration-500">Home</Link> 
+              <FaGreaterThan className='text-[#767676] font-normal text-[8px]'/>
+              <span>Checkout</span>
               </Flex>
-              <p className='font-dm text-[16px] font-[400] text-[#767676] pt-[127px]'>Have a coupon? <span className='hover:text-primary duration-75 cursor-pointer'>Click here to enter your code</span></p>
-
             </div>
+            <p className='w-[570px] text-base text-[#767676] font-normal font-dm pt-28'>
+              Have a coupon?
+              <span className='hover:text-primary duration-75 cursor-pointer px-2'>Click here to enter your code</span>
+            </p>
+
+
+
+
+
+
+
+
+
 
             <div className='pt-[119px]'>
               <CommonHeading text='Billing Details' className='font-[700] text-[39px] font-dm text-primary'/>
