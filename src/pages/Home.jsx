@@ -18,7 +18,7 @@ import PomotionTwo from '../assets/Ad_2.jpg'
 import PomotionThree from '../assets/Ad_3.png'
 import OfferImage from '../assets/offer.jpg'
 import CommonHeading from '../components/CommonHeading'
-import Cart from '../components/Cart'
+import CartCard  from '../components/CartCard'
 
 
 
@@ -77,10 +77,17 @@ const Home = () => {
 
   <Container>
     <Flex className='flex-wrap gap-x-10'>
+<<<<<<< HEAD
     <Cart title='Produtct' price='20' image={Product1}/>
     <Cart title='Produtct' price='50' image={Product1}/>
     <Cart title='Produtct' price='30' image={Product1}/>
     <Cart title='Produtct' price='00' image={Product1}/>
+=======
+      <CartCard />
+      <CartCard />
+      <CartCard />
+      <CartCard />
+>>>>>>> f2b0ba0dfac62eeaa07e62292f6333a1b71d0ede
     </Flex>
   </Container>
 
@@ -89,10 +96,17 @@ const Home = () => {
   <section className='pb-20'>
   <Container>
     <Flex className='flex-wrap gap-x-10'>
+<<<<<<< HEAD
     <Cart title='Produtct' price='20' image={Product1}/>
     <Cart title='Produtct' price='50' image={Product1}/>
     <Cart title='Produtct' price='30' image={Product1}/>
     <Cart title='Produtct' price='00' image={Product1}/>
+=======
+      <CartCard />
+      <CartCard />
+      <CartCard />
+      <CartCard />
+>>>>>>> f2b0ba0dfac62eeaa07e62292f6333a1b71d0ede
     </Flex>
   </Container>
 
@@ -105,10 +119,17 @@ const Home = () => {
   <section className='pb-20'>
   <Container>
     <Flex className='flex-wrap gap-x-10'>
+<<<<<<< HEAD
     <Cart title='Produtct' price='20' image={Product1}/>
     <Cart title='Produtct' price='50' image={Product1}/>
     <Cart title='Produtct' price='30' image={Product1}/>
     <Cart title='Produtct' price='00' image={Product1}/>
+=======
+      <CartCard/>
+      <CartCard/>
+      <CartCard/>
+      <CartCard/>
+>>>>>>> f2b0ba0dfac62eeaa07e62292f6333a1b71d0ede
     </Flex>
   </Container>
 
