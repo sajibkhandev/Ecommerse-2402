@@ -1,15 +1,23 @@
 import React from 'react'
-import Navber from '../layouts/Navber'
-import Sideber from '../layouts/Sideber'
-import Footer from '../layouts/Footer'
+import Container from '../components/Container'
+import Flex from '../components/Flex'
+import Pagination from '../components/Pagination'
+
 
 const Shop = () => {
   return (
-    <div>
-    
-      <h1 className='text-5xl text-center'>Shop page</h1>
-      
-    </div>
+   <section className='py-[140px]'>
+    <Container>
+      <Flex>
+        <div className='w-3/12'>Shop by Category</div>
+        <div className='w-9/12'>
+        <Pagination itemsPerPage={12} />
+        
+        </div>
+        
+      </Flex>
+    </Container>
+   </section>
   )
 }
 

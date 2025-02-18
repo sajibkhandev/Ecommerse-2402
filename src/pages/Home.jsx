@@ -9,6 +9,7 @@ import Container from '../components/Container'
 import Flex from '../components/Flex'
 
 import BannerImage from '../assets/banner.jpg'
+import Product1 from '../assets/product1.png'
 import Warrenty1 from '../assets/warrenty1.png'
 import Warrenty2 from '../assets/warrenty2.png'
 import Warrenty3 from '../assets/warrenty3.png'
@@ -76,10 +77,10 @@ const Home = () => {
 
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <Cart/>
-    <Cart/>
-    <Cart/>
-    <Cart/>
+    <Cart title='Produtct' price='20' image={Product1}/>
+    <Cart title='Produtct' price='50' image={Product1}/>
+    <Cart title='Produtct' price='30' image={Product1}/>
+    <Cart title='Produtct' price='00' image={Product1}/>
     </Flex>
   </Container>
 
@@ -88,10 +89,10 @@ const Home = () => {
   <section className='pb-20'>
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <Cart/>
-    <Cart/>
-    <Cart/>
-    <Cart/>
+    <Cart title='Produtct' price='20' image={Product1}/>
+    <Cart title='Produtct' price='50' image={Product1}/>
+    <Cart title='Produtct' price='30' image={Product1}/>
+    <Cart title='Produtct' price='00' image={Product1}/>
     </Flex>
   </Container>
 
@@ -104,10 +105,10 @@ const Home = () => {
   <section className='pb-20'>
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <Cart/>
-    <Cart/>
-    <Cart/>
-    <Cart/>
+    <Cart title='Produtct' price='20' image={Product1}/>
+    <Cart title='Produtct' price='50' image={Product1}/>
+    <Cart title='Produtct' price='30' image={Product1}/>
+    <Cart title='Produtct' price='00' image={Product1}/>
     </Flex>
   </Container>
 
