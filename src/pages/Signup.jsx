@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import CommonHeading from '../components/CommonHeading';
 import Flex from '../components/Flex';
-import Button from '../components/Button';
-import { FaGreaterThan } from "react-icons/fa6";
+import Button from '../components/Button'
 import SignUpForm from '../components/SignUpForm';
 import { FaCaretDown } from "react-icons/fa";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";

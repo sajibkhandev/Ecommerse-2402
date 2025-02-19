@@ -23,16 +23,6 @@ const Checkout = () => {
               Have a coupon?
               <span className='hover:text-primary duration-75 cursor-pointer px-2'>Click here to enter your code</span>
             </p>
-
-
-
-
-
-
-
-
-
-
             <div className='pt-[119px]'>
               <CommonHeading text='Billing Details' className='font-[700] text-[39px] font-dm text-primary'/>
               <form action="" className='pt-[42px]'>
@@ -179,8 +169,6 @@ const Checkout = () => {
          </div>
              
             </div>
-
-            
           </Container>
         </section>
 

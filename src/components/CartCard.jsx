@@ -4,11 +4,8 @@ import Image from './Image'
 import Flex from './Flex'
 import { FaHeart } from 'react-icons/fa'
 
-<<<<<<< HEAD:src/components/Cart.jsx
-const Cart = ({title,price,image}) => {
-=======
-const CartCard = () => {
->>>>>>> f2b0ba0dfac62eeaa07e62292f6333a1b71d0ede:src/components/CartCard.jsx
+const CartCard = ({title,price,image}) => {
+
   return (
     <div className='w-[370px] h-[465px] relative group '>
         <div className='z-10 absolute top-5 left-5 bg-black py-3 px-8 text-white text-base font-dm font-bold'>New</div>

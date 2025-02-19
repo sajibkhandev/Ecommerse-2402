@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import Flex from '../components/Flex'
 import Image from '../components/Image'
 import CommonHeading from '../components/CommonHeading'
-import { FaGreaterThan } from "react-icons/fa6";
 import CartList from '../components/CartList'
 import { FaTimes } from 'react-icons/fa';
 import ProductOne from '../assets/product1.png'

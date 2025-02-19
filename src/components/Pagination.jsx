@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import ReactPaginate from 'react-paginate';
-import Cart from './Cart';
 import Product1 from '../assets/product1.png'
 import Data from '../data'
+import CartCard from './CartCard';
 
 function Items({ currentItems }) {
     return (
@@ -12,7 +12,7 @@ function Items({ currentItems }) {
       {currentItems &&
         currentItems.map((item) => (
           <div className=''>
-            <Cart title={item.title}  price={item.price} image={item.image}/>
+            <CartCard title={item.title}  price={item.price} image={item.image}/>
           </div>
     ))}
       </div>
