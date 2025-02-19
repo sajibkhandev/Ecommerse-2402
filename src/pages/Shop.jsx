@@ -13,7 +13,6 @@ const Shop = () => {
         <div className='w-9/12'>
           <Pagination itemsPerPage={12} />
         </div>
-        
       </Flex>
     </Container>
    </section>

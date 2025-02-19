@@ -6,7 +6,7 @@ import Image from '../components/Image'
 import CommonHeading from '../components/CommonHeading'
 import CartList from '../components/CartList'
 import { FaTimes } from 'react-icons/fa';
-import ProductOne from '../assets/product1.png'
+import Product9 from '../assets/product9.png'
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { FaCaretDown } from "react-icons/fa";
 import Button from './../components/Button';
@@ -35,10 +35,10 @@ const Cart = () => {
 
           </Flex>
 
-          <Flex className="w-[1600px] px-5 bg-white items-center border-2 border-[#F0F0F0]">
+          <Flex className="w-[1600px] py-7 px-5 bg-white items-center border-2 border-[#F0F0F0]">
             <div className="w-[25%] flex flex-row items-center gap-x-4">
               <FaTimes size={20} className='text-primary' />
-              <Image className='w-[100px] h-[100px]' src={ProductOne}/>
+              <Image className='w-[100px] h-[100px]' src={Product9}/>
               <CartList cartdata='Product name'/>
             </div>
             <div className="w-[25%]">
@@ -101,7 +101,6 @@ const Cart = () => {
                 </div>
               </div>
             </Flex>
-
             <Flex className="w-[100%] flex justify-end pt-[30px] pb-[130px]">
               <Button text='Proceed to Checkout'/>
             </Flex>

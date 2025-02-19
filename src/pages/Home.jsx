@@ -7,7 +7,22 @@ import Footer from '../layouts/Footer'
 import Container from '../components/Container'
 import Flex from '../components/Flex'
 import BannerImage from '../assets/banner.jpg'
+import Product from '../assets/product1.jpg'
 import Product1 from '../assets/product1.png'
+import Product2 from '../assets/product2.png'
+import Product3 from '../assets/product3.png'
+import Product4 from '../assets/product4.png'
+import Product5 from '../assets/product5.png'
+import Product6 from '../assets/product6.png'
+import Product7 from '../assets/product7.png'
+import Product8 from '../assets/product8.png'
+import Product9 from '../assets/product9.png'
+import Product10 from '../assets/product10.png'
+import Product11 from '../assets/product11.png'
+import Product12 from '../assets/product12.png'
+
+
+
 import Warrenty1 from '../assets/warrenty1.png'
 import Warrenty2 from '../assets/warrenty2.png'
 import Warrenty3 from '../assets/warrenty3.png'
@@ -40,8 +55,6 @@ const Home = () => {
         <Image src={Warrenty3}/>
         <p className='text-base text-[#6D6D6D] font-dm font-normal'>Return policy in 30 days</p>
       </Flex>
-     
-
     </Flex>
   </Container>
   </section>
@@ -63,9 +76,7 @@ const Home = () => {
       </div>
       </Flex>
     </div>
-
     </Flex>
-
   </Container>
 
   <section className='pb-20'>
@@ -75,10 +86,10 @@ const Home = () => {
 
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <CartCard title='Product' price='20' image={Product1}/>
+    <CartCard title='Product' price='20' image={Product}/>
     <CartCard title='Product' price='50' image={Product1}/>
-    <CartCard title='Product' price='30' image={Product1}/>
-    <CartCard title='Product' price='00' image={Product1}/>
+    <CartCard title='Product' price='30' image={Product2}/>
+    <CartCard title='Product' price='00' image={Product3}/>
     </Flex>
   </Container>
   </section>
@@ -86,10 +97,10 @@ const Home = () => {
   <section className='pb-20'>
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <CartCard title='Product' price='20' image={Product1}/>
-    <CartCard title='Product' price='50' image={Product1}/>
-    <CartCard title='Product' price='30' image={Product1}/>
-    <CartCard title='Product' price='00' image={Product1}/>
+    <CartCard title='Product' price='20' image={Product4}/>
+    <CartCard title='Product' price='50' image={Product5}/>
+    <CartCard title='Product' price='30' image={Product6}/>
+    <CartCard title='Product' price='00' image={Product7}/>
     </Flex>
   </Container>
 
@@ -102,10 +113,10 @@ const Home = () => {
   <section className='pb-20'>
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <CartCard title='Product' price='20' image={Product1}/>
-    <CartCard title='Product' price='50' image={Product1}/>
-    <CartCard title='Product' price='30' image={Product1}/>
-    <CartCard title='Product' price='00' image={Product1}/>
+    <CartCard title='Product' price='20' image={Product8}/>
+    <CartCard title='Product' price='50' image={Product9}/>
+    <CartCard title='Product' price='30' image={Product10}/>
+    <CartCard title='Product' price='00' image={Product11}/>
     </Flex>
   </Container>
   </section>

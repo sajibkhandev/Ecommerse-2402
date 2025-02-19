@@ -11,7 +11,7 @@ const Navber = () => {
     <nav className='bg-white py-8 '>
       <Container>
         <Flex>
-          <div className='w-5/12'>
+          <div className='w-[38.4%]'>
           <Image src={Logo}/>
           </div>
           <div className='w-7/12'>
@@ -19,9 +19,9 @@ const Navber = () => {
           <ul className='flex gap-x-10'>
            <Link to='/'> <List text="Home"/></Link>
             <Link to='/shop'><List text="Shop"/></Link>
-            <List text="About"/>
-            <List text="Contacts"/>
-            <List text="Journal"/>
+            <Link to='/about'><List text="About"/></Link>
+            <Link to='/contacts'><List text="Contacts"/></Link>
+            <Link to='/journal'><List text="Journal"/></Link>
           </ul>
           </div>
         </Flex>
