@@ -108,7 +108,6 @@ const Cart = () => {
 
           </div>   
         </table>
-        
       </Container>
     </section>
   )

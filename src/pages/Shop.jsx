@@ -11,8 +11,7 @@ const Shop = () => {
       <Flex>
         <div className='w-3/12'>Shop by Category</div>
         <div className='w-9/12'>
-        <Pagination itemsPerPage={12} />
-        
+          <Pagination itemsPerPage={12} />
         </div>
         
       </Flex>

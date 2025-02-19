@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import Image from '../components/Image'
 import Navber from '../layouts/Navber'
 import Sideber from '../layouts/Sideber'
 import Footer from '../layouts/Footer'
 import Container from '../components/Container'
 import Flex from '../components/Flex'
-
 import BannerImage from '../assets/banner.jpg'
 import Product1 from '../assets/product1.png'
 import Warrenty1 from '../assets/warrenty1.png'
@@ -77,10 +75,10 @@ const Home = () => {
 
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <CartCard title='Produtct' price='20' image={Product1}/>
-    <CartCard title='Produtct' price='50' image={Product1}/>
-    <CartCard title='Produtct' price='30' image={Product1}/>
-    <CartCard title='Produtct' price='00' image={Product1}/>
+    <CartCard title='Product' price='20' image={Product1}/>
+    <CartCard title='Product' price='50' image={Product1}/>
+    <CartCard title='Product' price='30' image={Product1}/>
+    <CartCard title='Product' price='00' image={Product1}/>
     </Flex>
   </Container>
   </section>
@@ -88,10 +86,10 @@ const Home = () => {
   <section className='pb-20'>
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <CartCard title='Produtct' price='20' image={Product1}/>
-    <CartCard title='Produtct' price='50' image={Product1}/>
-    <CartCard title='Produtct' price='30' image={Product1}/>
-    <CartCard title='Produtct' price='00' image={Product1}/>
+    <CartCard title='Product' price='20' image={Product1}/>
+    <CartCard title='Product' price='50' image={Product1}/>
+    <CartCard title='Product' price='30' image={Product1}/>
+    <CartCard title='Product' price='00' image={Product1}/>
     </Flex>
   </Container>
 
@@ -104,18 +102,13 @@ const Home = () => {
   <section className='pb-20'>
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <CartCard title='Produtct' price='20' image={Product1}/>
-    <CartCard title='Produtct' price='50' image={Product1}/>
-    <CartCard title='Produtct' price='30' image={Product1}/>
-    <CartCard title='Produtct' price='00' image={Product1}/>
+    <CartCard title='Product' price='20' image={Product1}/>
+    <CartCard title='Product' price='50' image={Product1}/>
+    <CartCard title='Product' price='30' image={Product1}/>
+    <CartCard title='Product' price='00' image={Product1}/>
     </Flex>
   </Container>
-
   </section>
-
-
-
-
   </Link>
  
   </>

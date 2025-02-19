@@ -14,7 +14,6 @@ import Signup from "./pages/Signup";
 import Checkout from "./pages/Checkout";
 import Error from "./pages/Error";
 import RootLayouts from "./layouts/RootLayouts";
-// import CartCard from './components/CartCard';
 import Cart from "./pages/Cart";
 
 

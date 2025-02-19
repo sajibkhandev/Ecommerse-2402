@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import ReactPaginate from 'react-paginate';
 import Product1 from '../assets/product1.png'
 import Data from '../data'
-import CartCard from './CartCard';
+import CartCard from '../components/CartCard';
 
 function Items({ currentItems }) {
     return (
