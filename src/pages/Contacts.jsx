@@ -6,6 +6,9 @@ import CommonHeading from '../components/CommonHeading';
 import Button from './../components/Button';
 import Image from '../components/Image';
 import Location from '../assets/location.png'
+import Flex from '../components/Flex';
+import { FaPlus } from 'react-icons/fa';
+import List from './../components/List';
 
 const Contacts = () => {
   return (
@@ -13,8 +16,8 @@ const Contacts = () => {
       <Container>
         <CommonHeading className='pt-5' text='Contacts'/>
         <ArrowPages prevPage='Home' nextPage='Contacts'/>
-        <h5 className='text-[39px] text-primary font-dm font-bold pb-10'>Fill up a Form</h5>
-        <div className="">
+        <h5 className='text-[39px] text-primary font-dm font-bold pt-20 pb-10'>Fill up a Form</h5>
+        <div>
           <SignUpForm className="!pb-5 !-mt-2" formTitle='Name' formText='Your name here'/>
           <SignUpForm className="!pb-5 !-mt-2" formTitle='Email' formText='Your email here'/>
           <SignUpForm className="!pb-5 !-mt-2 border-none" formTitle='Message' formText='Your message here'/>
@@ -23,9 +26,32 @@ const Contacts = () => {
         <div className="pb-48">
           <Button text='Post'/>
         </div>
-        <div className="pb-36">
+        <div className="pb-36 relative">
+          <div className="absolute w-[451px] h-[412px] bg-white ml-20 mt-24">
+            <Flex className='px-5 border-b-[2px] py-7 items-center justify-between'>
+              <h3 className="pb-0 mt-2 border-none text-base font-bold font-dm text-primary">
+              Germany Office</h3>
+              <FaPlus className='text-[12px] text-primary'/>
+            </Flex>
+            <Flex className='px-5 border-b-[2px] py-7 items-center justify-between'>
+              <h3 className="pb-0 mt-2 border-none text-base font-bold font-dm text-primary">
+              Slovakia Office</h3>
+              <FaPlus className='text-[12px] text-primary'/>
+            </Flex>
+            <Flex className='flex-col px-5 py-5 items-start justify-between'>
+              <h3 className="pb-0 mt-2 border-none text-base font-bold font-dm text-primary">
+              Lithuania Office
+              </h3>
+              <div className="pt-3">
+                <List className="!leading-9 !text-base" text='575 Crescent Ave. Quakertown, PA 18951'/>
+                <List className="!leading-9 !text-base" text='+432 533 12 523'/>
+                <List className="!leading-9 !text-base" text='info@domain.com'/>
+                <List className="!leading-9 !text-base" text='Mon - Fri: 9am - 6pm'/>
+              </div>
+
+            </Flex>
+          </div>
           <Image className='w-full h-[572px]' src={Location}/>
-          
         </div>
       </Container>
     </section>

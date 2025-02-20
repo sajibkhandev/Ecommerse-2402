@@ -7,6 +7,7 @@ import { IoSearch } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from 'react-router-dom'
 
 const Sideber = () => {
   return (
@@ -29,7 +30,8 @@ const Sideber = () => {
                 <div className='w-4/12'>
                 <Flex className='gap-x-10 items-center justify-end'>
                 <Flex className='gap-x-2.5'>
-                <FaUser />
+
+                <Link to="/myaccount"><FaUser /></Link> 
                 <TiArrowSortedDown />
                 </Flex>
                 <FaShoppingCart className='text-xl' />

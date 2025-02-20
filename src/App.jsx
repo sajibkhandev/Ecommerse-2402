@@ -15,6 +15,7 @@ import Checkout from "./pages/Checkout";
 import Error from "./pages/Error";
 import RootLayouts from "./layouts/RootLayouts";
 import Cart from "./pages/Cart";
+import MyAccount from "./pages/MyAccount";
 
 
 
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
           <Route path="/cart" element={<Cart/>}> </Route>
           <Route path="/checkout" element={<Checkout/>}> </Route>
           <Route path="/error" element={<Error/>}> </Route>
+          <Route path="/myaccount" element={<MyAccount/>}> </Route>
     </Route>
 
     
