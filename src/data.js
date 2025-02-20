@@ -98,7 +98,8 @@ let data = [
         title: "Project Fourteen",
         price: "44$",
         image: Product
-    },
+    }
+    ,
     {
         id: 15,
         title: "Project One",
@@ -140,7 +141,599 @@ let data = [
         title: "Project Tweleve",
         price: "44$",
         image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
     },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+    {
+        id: 20,
+        title: "Project Eleven",
+        price: "44$",
+        image: Product11
+    },
+    {
+        id: 21,
+        title: "Project Tweleve",
+        price: "44$",
+        image: Product12
+    }
+    ,
+    {
+        id: 15,
+        title: "Project One",
+        price: "44$",
+        image: Product1
+    },
+    {
+        id: 16,
+        title: "Project Two",
+        price: "44$",
+        image: Product2
+    },
+    {
+        id: 17,
+        title: "Project Three",
+        price: "44$",
+        image: Product3
+    },
+    {
+        id: 18,
+        title: "Project four",
+        price: "44$",
+        image: Product4
+    },
+    {
+        id: 19,
+        title: "Project Seven",
+        price: "44$",
+        image: Product7
+    },
+  
+    
 ];
 
 export default data;
