@@ -23,6 +23,7 @@ import Product12 from '../assets/product12.png'
 
 
 
+
 import Warrenty1 from '../assets/warrenty1.png'
 import Warrenty2 from '../assets/warrenty2.png'
 import Warrenty3 from '../assets/warrenty3.png'
@@ -34,12 +35,86 @@ import CommonHeading from '../components/CommonHeading'
 import CartCard  from '../components/CartCard'
 
 
+import "slick-carousel/slick/slick.css";
+
+import Slider from "react-slick";
+import NextArrow from '../components/NextArrow'
+import PrevArrow from '../components/PrevArrow'
+
+
 
 const Home = () => {
+  var settings = {
+    arrows:true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+   
+    nextArrow:<NextArrow />,
+    prevArrow:<PrevArrow/>
+
+  };
   return (
   <>
  
-  <Link to='/#'><Image className='w-full' src={BannerImage}/>
+  <section>
+    <Container>
+    <Slider {...settings}>
+      <div >
+      <Image src={}/>
+      </div>
+      <div >
+      <Image src={}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product1}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product1}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product1}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product1}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+     
+      
+     
+     
+      
+    </Slider>
+      
+    </Container>
+  </section>
   <section className='border-b border-[#F0F0F0]'>
   <Container>
     <Flex className='py-8 justify-between'>
@@ -83,15 +158,63 @@ const Home = () => {
   <Container>
   <CommonHeading className='pb-12' text="New Arrivals"/>
   </Container>
-
-  <Container>
-    <Flex className='flex-wrap gap-x-10'>
-    <CartCard title='Product' price='20' image={Product}/>
-    <CartCard title='Product' price='50' image={Product1}/>
-    <CartCard title='Product' price='30' image={Product2}/>
-    <CartCard title='Product' price='00' image={Product3}/>
-    </Flex>
-  </Container>
+{/* Slick Slider Start */}
+   <Container>
+   <Slider {...settings}>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product1}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product1}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product1}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product1}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product1}/>
+      </div>
+      <div >
+      <CartCard title='Product' price='20' image={Product}/>
+      </div>
+     
+      
+     
+     
+      
+    </Slider>
+   </Container>
+{/* Slick Slider end */}
+ 
   </section>
 
   <section className='pb-20'>
