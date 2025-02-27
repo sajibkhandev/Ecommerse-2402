@@ -58,62 +58,8 @@ const Home = () => {
   return (
   <>
  
-  <section>
-    <Container>
-    <Slider {...settings}>
-      <div >
-      <Image src={}/>
-      </div>
-      <div >
-      <Image src={}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product1}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product1}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product1}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product1}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-     
-      
-     
-     
-      
-    </Slider>
-      
-    </Container>
+  <section >
+    <Image className='mx-auto'  src={BannerImage}/>
   </section>
   <section className='border-b border-[#F0F0F0]'>
   <Container>
@@ -243,7 +189,7 @@ const Home = () => {
     </Flex>
   </Container>
   </section>
-  </Link>
+  
  
   </>
   )

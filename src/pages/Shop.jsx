@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from '../components/Container'
 import Flex from '../components/Flex'
 import Pagination from '../components/Pagination'
@@ -6,13 +6,40 @@ import Image from '../components/Image'
 import IconOne from '../../public/iconOne.png'
 import IconTwo from '../../public/iconTwo.png'
 
+import { LuPlus } from 'react-icons/lu'
+import Catagory from '../components/Catagory'
+
 
 const Shop = () => {
+  let [show,setShow]=useState(false)
+  let handleCatagoryOne=()=>{
+    setShow(!show)
+    
+  }
   return (
    <section className='py-[140px]'>
     <Container>
-      <Flex>
-        <div className='w-3/12'>Shop by Category</div>
+      <Flex >
+        <div className='w-3/12 pr-10'>
+        <h3 className='text-xl text-[#262626] font-dm font-bold'>Shop by Category</h3>
+        <div className='py-9'>
+          <div onClick={handleCatagoryOne}><Catagory type="havebutton" catagoryText="Category 1"/>
+          {
+            show && <div className=' pl-14'>
+            <Catagory  catagoryText="Phone"/>
+            <Catagory  catagoryText="Desktop"/>
+            <Catagory  catagoryText="Watch"/>
+            <Catagory  catagoryText="Phone"/>
+            </div>
+          }
+          </div>
+          <Catagory catagoryText="Category 2"/>
+          <Catagory type="havebutton" catagoryText="Category 3"/>
+          <Catagory catagoryText="Category 4"/>
+          <Catagory catagoryText="Category 5"/>
+          
+        </div>
+        </div>
         <div className='w-9/12'>
         <Flex className='justify-between pb-[60px]'>
           <div className='flex gap-x-5'>
