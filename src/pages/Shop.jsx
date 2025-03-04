@@ -7,7 +7,7 @@ import IconOne from '../../public/iconOne.png'
 import IconTwo from '../../public/iconTwo.png'
 
 import { LuPlus } from 'react-icons/lu'
-import Catagory from '../components/Catagory'
+import Catagory from '../components/Catagory.jsx'
 
 
 const Shop = () => {

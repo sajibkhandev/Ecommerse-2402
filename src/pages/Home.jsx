@@ -40,6 +40,8 @@ import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
 import NextArrow from '../components/NextArrow'
 import PrevArrow from '../components/PrevArrow'
+import { useDispatch, useSelector } from 'react-redux'
+import {counter} from '../slices/counterSlice'
 
 
 
@@ -55,6 +57,9 @@ const Home = () => {
     prevArrow:<PrevArrow/>
 
   };
+
+  let data2=useSelector(state=>state.counterFuntion.value)
+  let dispatch=useDispatch()
   return (
   <>
  
@@ -99,6 +104,11 @@ const Home = () => {
     </div>
     </Flex>
   </Container>
+
+  <div>
+    <h1>Counter {data2}</h1>
+    <button onClick={()=>dispatch(counter(10))}>Increment</button>
+  </div>
 
   <section className='pb-20'>
   <Container>
