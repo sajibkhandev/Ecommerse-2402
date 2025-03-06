@@ -9,13 +9,18 @@ import Location from '../assets/location.png'
 import Flex from '../components/Flex';
 import { FaPlus } from 'react-icons/fa';
 import List from './../components/List';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Contacts = () => {
+  let data2=useSelector(state=>state.breadFunction.preiousValue)
   return (
     <section>
       <Container>
-        <CommonHeading className='pt-5' text='Contacts'/>
-        <ArrowPages prevPage='Home' nextPage='Contacts'/>
+      <h2 className='text-5xl font-bold pb-4'>Contact</h2>
+      <div className='pb-20'>
+        <p><Link to={data2=="Home"?'/':`/${data2}`}>{data2}</Link> > contact</p>
+      </div>
         <h5 className='text-[39px] text-primary font-dm font-bold pt-20 pb-10'>Fill up a Form</h5>
         <div>
           <SignUpForm className="!pb-5 !-mt-2" formTitle='Name' formText='Your name here'/>

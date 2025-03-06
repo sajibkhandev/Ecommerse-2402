@@ -8,9 +8,15 @@ import IconTwo from '../../public/iconTwo.png'
 
 import { LuPlus } from 'react-icons/lu'
 import Catagory from '../components/Catagory.jsx'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+
 
 
 const Shop = () => {
+  let data=useSelector(state=>state.breadFunction.preiousValue)
+  
+  
   let [show,setShow]=useState(false)
   let handleCatagoryOne=()=>{
     setShow(!show)
@@ -19,7 +25,12 @@ const Shop = () => {
   return (
    <section className='py-[140px]'>
     <Container>
-      <Flex >
+      <h2 className='text-5xl font-bold pb-4'>Shop</h2>
+      <div className='pb-20'>
+        <p><Link to={data=="Home"?'/':`/${data}`}>{data}</Link> > shop</p>
+      </div>
+    
+      <Flex  >
         <div className='w-3/12 pr-10'>
         <h3 className='text-xl text-[#262626] font-dm font-bold'>Shop by Category</h3>
         <div className='py-9'>

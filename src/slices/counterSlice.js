@@ -9,10 +9,6 @@ export const counterSlice = createSlice({
     counter: (state,action) => {
       state.value+=action.payload
       
-     
-      
-    
-      
     }
   },
 })
