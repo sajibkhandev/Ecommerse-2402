@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Image from '../components/Image'
 import Navber from '../layouts/Navber'
@@ -42,10 +42,15 @@ import NextArrow from '../components/NextArrow'
 import PrevArrow from '../components/PrevArrow'
 import { useDispatch, useSelector } from 'react-redux'
 import {counter} from '../slices/counterSlice'
+import axios from 'axios'
 
 
 
 const Home = () => {
+  let [allProduct,setAllProduct]=useState([])
+  let data2=useSelector(state=>state.counterFuntion.value)
+  let dispatch=useDispatch()
+
   var settings = {
     arrows:true,
     infinite: true,
@@ -58,8 +63,22 @@ const Home = () => {
 
   };
 
-  let data2=useSelector(state=>state.counterFuntion.value)
-  let dispatch=useDispatch()
+  useEffect(()=>{
+        async function allData(){
+        let data=await axios.get('https://dummyjson.com/products')
+        setAllProduct(data.data.products);
+       }
+       allData()
+    },[])
+
+
+
+
+
+
+
+
+
   return (
   <>
  
@@ -105,10 +124,7 @@ const Home = () => {
     </Flex>
   </Container>
 
-  <div>
-    <h1>Counter {data2}</h1>
-    <button onClick={()=>dispatch(counter(10))}>Increment</button>
-  </div>
+  
 
   <section className='pb-20'>
   <Container>
@@ -117,54 +133,13 @@ const Home = () => {
 {/* Slick Slider Start */}
    <Container>
    <Slider {...settings}>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product1}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product1}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product1}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product1}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product1}/>
-      </div>
-      <div >
-      <CartCard title='Product' price='20' image={Product}/>
-      </div>
-     
-      
-     
+  
+   {
+    allProduct.map(item=>(
+            
+      <CartCard title={item.title} price={item.price} image={item.thumbnail}/>
+  ))
+   }
      
       
     </Slider>
@@ -176,10 +151,11 @@ const Home = () => {
   <section className='pb-20'>
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <CartCard title='Product' price='20' image={Product4}/>
-    <CartCard title='Product' price='50' image={Product5}/>
-    <CartCard title='Product' price='30' image={Product6}/>
-    <CartCard title='Product' price='00' image={Product7}/>
+    {
+      allProduct.map(item=>(
+        <CartCard title={item.title} price={item.price} image={item.thumbnail}/>
+      ))
+    }
     </Flex>
   </Container>
 
@@ -192,10 +168,11 @@ const Home = () => {
   <section className='pb-20'>
   <Container>
     <Flex className='flex-wrap gap-x-10'>
-    <CartCard title='Product' price='20' image={Product8}/>
-    <CartCard title='Product' price='50' image={Product9}/>
-    <CartCard title='Product' price='30' image={Product10}/>
-    <CartCard title='Product' price='00' image={Product11}/>
+    {
+      allProduct.map(item=>(
+        <CartCard title={item.title} price={item.price} image={item.thumbnail}/>
+      ))
+    }
     </Flex>
   </Container>
   </section>

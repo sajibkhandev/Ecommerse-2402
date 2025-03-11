@@ -1,20 +1,34 @@
-import React, {  useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import ReactPaginate from 'react-paginate';
 import Product1 from '../assets/product1.png'
 import Data from '../data'
 import CartCard from '../components/CartCard';
+import axios from 'axios';
 
 
 
 function Items({ currentItems }) {
+  let [allProduct,setAllProduct]=useState([])
+  
+    useEffect(()=>{
+  
+        async function allData(){
+        let data=await axios.get('https://dummyjson.com/products')
+        setAllProduct(data.data.products);
+       }
+  
+       allData()
+      
+  
+    },[])
     return (
     <>
       <div className='flex flex-wrap gap-x-[46px]'>
-      {currentItems &&
-        currentItems.map((item) => (
+      {allProduct &&
+        allProduct.map((item) => (
           <div className=''>
-            <CartCard title={item.title}  price={item.price} image={item.image}/>
+            <CartCard title={item.title}  price={item.price} image={item.thumbnail}/>
           </div>
     ))}
       </div>

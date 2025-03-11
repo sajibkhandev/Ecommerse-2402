@@ -13,7 +13,7 @@ const Signup = () => {
     <section>
       <Container>
       <CommonHeading className='pt-5' text='Sign up'/>
-      <ArrowPages prevPage='Home' nextPage='Signup'/>
+    
         <p className='w-[570px] text-base text-[#767676] font-normal font-dm py-10'>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
           Lorem Ipsum has been the industry's standard dummy text ever since the.
