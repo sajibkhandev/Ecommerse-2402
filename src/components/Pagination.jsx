@@ -1,81 +1,71 @@
-import React, {  useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
-import ReactPaginate from 'react-paginate';
-import Product1 from '../assets/product1.png'
-import Data from '../data'
-import CartCard from '../components/CartCard';
-import axios from 'axios';
-
-
-
-function Items({ currentItems }) {
-  let [allProduct,setAllProduct]=useState([])
-  
-    useEffect(()=>{
-  
-        async function allData(){
-        let data=await axios.get('https://dummyjson.com/products')
-        setAllProduct(data.data.products);
-       }
-  
-       allData()
-      
-  
-    },[])
-    return (
-    <>
-      <div className='flex flex-wrap gap-x-[46px]'>
-      {allProduct &&
-        allProduct.map((item) => (
-          <div className=''>
-            <CartCard title={item.title}  price={item.price} image={item.thumbnail}/>
-          </div>
-    ))}
-      </div>
-    </>
-  );
-}
-
+import React, { useEffect, useState } from "react";
+import ReactPaginate from "react-paginate";
+// import ReactDOM from "react-dom";
+// import Product1 from "../assets/product1.png";
+// import Data from "../data";
+import CartCard from "../components/CartCard";
+import axios from "axios";
+import Flex from "./Flex";
 function Pagination({ itemsPerPage }) {
-  
-  const [itemOffset, setItemOffset] = useState(0);
+  let [data, setData] = useState({});
+  let [skip, setSkip] = useState(0);
 
-  
-  const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = Data.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(Data.length / itemsPerPage);
+  useEffect(() => {
+    async function allData() {
+      let response = await axios.get(
+        `https://dummyjson.com/products?limit=${itemsPerPage}&skip=${skip}`
+      );
+      setData(response.data);
+    }
+    allData();
+  }, [skip]);
 
-  
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % Data.length;
+  console.log(data);
+
+  function hnadleSkip(event) {
+    const newOffset = event.selected * itemsPerPage;
     console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
+      `User requested page number ${
+        event.selected + 1
+      }, which is offset ${newOffset}`
     );
-    setItemOffset(newOffset);
-  };
-
-
-
+    setSkip(newOffset);
+  }
+  const pageCount = Math.ceil((data.total || 0) / (itemsPerPage || 1));
   return (
     <>
-      <Items currentItems={currentItems} />
-      <div className='mt-20 flex justify-between'>
-      <ReactPaginate
-        breakLabel="...."
-        nextLabel=""
-        className="flex gap-x-5"
-        pageLinkClassName=" p-5 bg-[#262626] text-white"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel=""
-        renderOnZeroPageCount={null}
-      />
-      <h2>Products from {itemOffset+1} to {endOffset>Data.length?Data.length:endOffset} of {Data.length}</h2>
+      {/* paginate item   */}
+      <Flex className="flex-wrap justify-between">
+        {data.products?.map((item, index) => (
+          <CartCard
+            key={index}
+            title={item.title}
+            price={item.price}
+            image={item.thumbnail}
+          />
+        ))}
+      </Flex>
+
+      {/* paginate */}
+      <div className="mt-20 flex justify-between">
+        <ReactPaginate
+          breakLabel="...."
+          nextLabel="Next >"
+          className="flex gap-x-5"
+          pageLinkClassName="py-4 px-5 bg-gray-500 text-white"
+          onPageChange={hnadleSkip}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel="< Prev"
+          renderOnZeroPageCount={null}
+        />
+        <h2>
+          Products from {data.skip + 1} to {data.skip + data.limit} of
+          {data.total}
+        </h2>
       </div>
     </>
   );
 }
 
-export default Pagination
+export default Pagination;
