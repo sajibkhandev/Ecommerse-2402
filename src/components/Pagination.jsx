@@ -1,24 +1,34 @@
-import React, { useEffect, useState } from "react";
-import ReactPaginate from "react-paginate";
-// import ReactDOM from "react-dom";
-// import Product1 from "../assets/product1.png";
-// import Data from "../data";
-import CartCard from "../components/CartCard";
-import axios from "axios";
-import Flex from "./Flex";
-function Pagination({ itemsPerPage }) {
+import React, { useEffect, useState } from 'react';
+import ReactPaginate from 'react-paginate';
+import CartCard from '../components/CartCard';
+import axios from 'axios';
+import Flex from './Flex';
+function Pagination({ itemsPerPage, categorySlug }) {
   let [data, setData] = useState({});
   let [skip, setSkip] = useState(0);
+  console.log(categorySlug);
 
-  useEffect(() => {
-    async function allData() {
-      let response = await axios.get(
-        `https://dummyjson.com/products?limit=${itemsPerPage}&skip=${skip}`
-      );
-      setData(response.data);
-    }
-    allData();
-  }, [skip]);
+  if (categorySlug) {
+    useEffect(() => {
+      async function allData() {
+        let response = await axios.get(
+          `https://dummyjson.com/products/category/${categorySlug}?limit=${itemsPerPage}&skip=${skip}`,
+        );
+        setData(response.data);
+      }
+      allData();
+    }, [skip, categorySlug]);
+  } else {
+    useEffect(() => {
+      async function allData() {
+        let response = await axios.get(
+          `https://dummyjson.com/products?limit=${itemsPerPage}&skip=${skip}`,
+        );
+        setData(response.data);
+      }
+      allData();
+    }, [skip]);
+  }
 
   console.log(data);
 
@@ -27,7 +37,7 @@ function Pagination({ itemsPerPage }) {
     console.log(
       `User requested page number ${
         event.selected + 1
-      }, which is offset ${newOffset}`
+      }, which is offset ${newOffset}`,
     );
     setSkip(newOffset);
   }
@@ -35,14 +45,16 @@ function Pagination({ itemsPerPage }) {
   return (
     <>
       {/* paginate item   */}
-      <Flex className="flex-wrap justify-between">
+      <Flex className="flex flex-wrap">
         {data.products?.map((item, index) => (
-          <CartCard
-            key={index}
-            title={item.title}
-            price={item.price}
-            image={item.thumbnail}
-          />
+          <div key={index} className="w-1/3 p-4">
+            <CartCard
+              title={item.title}
+              price={item.price}
+              image={item.thumbnail}
+              discountPercentage={item.discountPercentage + ' %'}
+            />
+          </div>
         ))}
       </Flex>
 
@@ -60,7 +72,7 @@ function Pagination({ itemsPerPage }) {
           renderOnZeroPageCount={null}
         />
         <h2>
-          Products from {data.skip + 1} to {data.skip + data.limit} of
+          Products from {data.skip + 1} to {data.skip + data.limit} of{' '}
           {data.total}
         </h2>
       </div>
