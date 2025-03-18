@@ -1,23 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       maxWidth: {
-        'container': '1604px',
+        container: '1280px',
       },
       fontFamily: {
-        'dm': ["DM Sans"],
+        dm: ['DM Sans'],
       },
-      colors:{
-        "primary":"#262626",
-        "secondary":"#767676",
-      }
+      colors: {
+        primary: '#262626',
+        secondary: '#767676',
+      },
     },
   },
   plugins: [],
-}
-
+};

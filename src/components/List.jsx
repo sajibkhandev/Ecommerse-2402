@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const List = ({text,className}) => {
+const List = ({ text, className = '' }) => {
   return (
-    
-    <li className={`text-secondary list-none text-sm font-normal font-dm hover:text-primary hover:font-bold duration-300 cursor-pointer ${className}`}>{text}</li>
-    
-  )
-}
+    <li
+      className={`cursor-pointer list-none font-dm text-sm font-normal text-secondary duration-300 hover:font-bold hover:text-primary ${className}`}
+    >
+      {text}
+    </li>
+  );
+};
 
-export default List
+export default List;

@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const CommonHeading = ({text,className}) => {
+const CommonHeading = ({ text, className = '' }) => {
   return (
-    <h2 className={`text-[49px] text-[#262626] font-bold font-dm ${className}`}>{text}</h2>
-  )
-}
+    <h2 className={`font-dm text-[49px] font-bold text-[#262626] ${className}`}>
+      {text}
+    </h2>
+  );
+};
 
-export default CommonHeading
+export default CommonHeading;
