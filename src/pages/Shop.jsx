@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 const Shop = () => {
   let data = useSelector((state) => state.breadFunction.preiousValue);
   const [categories, setCategory] = useState([]);
-  const [currentCategorySlug, setcurrentCategorySlug] = useState('beauty');
+  const [currentCategorySlug, setcurrentCategorySlug] = useState();
   
   useEffect(() => {
     fetch('https://dummyjson.com/products/categories')
