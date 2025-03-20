@@ -16,11 +16,19 @@ let devision=[
         devision:"Syhlet",
         district:[
             {
-                name:"hobigong",
+                name:"সিলেট",
                 
             },
             {
-                name:"muolobibazer",
+                name:"সুনামগঞ্জ",
+                
+            },
+            {
+                name:"মৌলভীবাজার ",
+                
+            },
+            {
+                name:"হবিগঞ্জ ",
                 
             },
         ]

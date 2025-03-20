@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from '../components/Container'
 import Flex from '../components/Flex'
 import Image from '../components/Image'
@@ -10,6 +10,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 
 const Sideber = () => {
+
   return (
     <section className='bg-[#F5F5F3] py-6'>
         <Container>
@@ -23,8 +24,16 @@ const Sideber = () => {
                 </div>
                 <div className='w-6/12'>
                 <div className='w-full bg-white relative'>
+
+
+
                 <input className='w-full border-0 py-4 px-5 placeholder:text-sm placeholder:text-[#C4C4C4]' type="text"  placeholder='Search Products' />
-                <IoSearch  className='absolute top-1/2 right-[17px] -translate-y-1/2'/>
+
+
+
+
+
+                <IoSearch   className='absolute top-1/2 right-[17px] -translate-y-1/2'/>
                 </div>
                 </div>
                 <div className='w-4/12'>
