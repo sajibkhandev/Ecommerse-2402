@@ -16,15 +16,27 @@ export const cartSlice = createSlice({
         }else{
             state.cartItem.push({...action.payload,quantity:1})
         }
-
-        
-        
-        
       
-    }
+    },
+    increment:(state,action)=>{
+      state.cartItem.map(item=>{
+        if(item.title==action.payload.title){
+          item.quantity=item.quantity+1
+        }
+      }) 
+    },
+    decrement:(state,action)=>{
+      state.cartItem.map(item=>{
+        if(item.title==action.payload.title){
+          if(item.quantity>1){
+            item.quantity=item.quantity-1
+          }
+        }
+      }) 
+    },
   },
 })
 
-export const { addtocart} = cartSlice.actions
+export const { addtocart,increment,decrement} = cartSlice.actions
 
 export default cartSlice.reducer
