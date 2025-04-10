@@ -34,9 +34,22 @@ export const cartSlice = createSlice({
         }
       }) 
     },
+    removeBtn:(state,action)=>{
+      state.cartItem.map((item,index)=>{
+        if(item.title==action.payload.title){
+          state.cartItem.splice(index,1)
+          
+        }
+        
+      })
+      
+
+    }
+
+
   },
 })
 
-export const { addtocart,increment,decrement} = cartSlice.actions
+export const { addtocart,increment,decrement,removeBtn} = cartSlice.actions
 
 export default cartSlice.reducer

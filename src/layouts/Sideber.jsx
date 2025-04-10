@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from '../components/Container'
 import Flex from '../components/Flex'
 import Image from '../components/Image'
@@ -9,9 +9,10 @@ import { TiArrowSortedDown } from "react-icons/ti";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import {increment,decrement} from '../slices/cartSlice'
+import {increment,decrement, removeBtn} from '../slices/cartSlice'
 
 const Sideber = () => {
+  let [total,setTotal]=useState(0)
   let dispatch=useDispatch()
 
   let cart=useSelector(state=>state.addtocart.cartItem)
@@ -29,6 +30,14 @@ const Sideber = () => {
     dispatch(decrement(item))
     
   }
+  useEffect(()=>{
+    let total2=0
+  cart.map(item=>{
+    total2+=item.price*item.quantity
+  })
+  setTotal(total)
+  },[cart])
+  
 
   return (
     <section className='bg-[#F5F5F3] py-6'>
@@ -63,6 +72,7 @@ const Sideber = () => {
                      <FaShoppingCart className='text-xl text-red-500' onClick={handleCart} />
 
                      <ul className='flex justify-between bg-white py-10 px-5 text-lg'>
+                      <li>Action</li>
                       <li>Product:</li>
                       <li>Price:</li>
                       <li>Quantity:</li>
@@ -70,20 +80,31 @@ const Sideber = () => {
                      </ul>
 
                      {
-                      cart.map((item,index)=>(
-                        <ul className='flex justify-between bg-black py-10 px-5 text-lg text-white border-b border-white'>
-                          <li>{item.title}</li>
-                          <li>{item.price}</li>
-                          <li className=' border border-white py-1 px-6'><button className='pr-4' onClick={()=>{hanldeDecrement(item)}}>-</button><span>{item.quantity}</span><button className='pl-4' onClick={()=>{hanldeIncrement(item)}}>+</button></li>
-                          <li>{item.price*item.quantity}</li>
-                        </ul>
-                      ))
+                     cart.length>0 ?
+                     cart.map((item,index)=>(
+                      <ul className='flex justify-between bg-black py-10 px-5 text-lg text-white border-b border-white'>
+                        <li >
+                        <button onClick={()=>dispatch(removeBtn(item))}
+                          className="px-6 py-2 bg-red-600 text-white rounded-xl ">X
+                        </button>
+
+                        </li>
+                        <li>{item.title}</li>
+                        <li>{item.price}</li>
+                        <li className=' border border-white py-1 px-6'><button className='pr-4' onClick={()=>{hanldeDecrement(item)}}>-</button><span>{item.quantity}</span><button className='pl-4' onClick={()=>{hanldeIncrement(item)}}>+</button></li>
+                        <li>{item.price*item.quantity}</li>
+                      </ul>
+                      
+                    ))
+                     :
+                     <h1 className='text-white text-5xl text-center pt-20'>Cart is empty</h1>
+
                      }
+                     <h1 className='text-white text-5xl absolute bottom-5 right-5'>Totol: {total}
+                     
+                     </h1>
 
                      
-
-
-
 
                   </div>
                   
