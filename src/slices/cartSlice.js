@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const cartSlice = createSlice({
   name: 'cart',
   initialState: {
-    cartItem:[]
+    cartItem:localStorage.getItem("cart")?JSON.parse(localStorage.getItem("cart")):[]
   },
   reducers: {
     addtocart: (state,action) => {
@@ -16,6 +16,7 @@ export const cartSlice = createSlice({
         }else{
             state.cartItem.push({...action.payload,quantity:1})
         }
+        localStorage.setItem("cart",JSON.stringify(state.cartItem))
       
     },
     increment:(state,action)=>{
@@ -24,6 +25,7 @@ export const cartSlice = createSlice({
           item.quantity=item.quantity+1
         }
       }) 
+      localStorage.setItem("cart",JSON.stringify(state.cartItem))
     },
     decrement:(state,action)=>{
       state.cartItem.map(item=>{
@@ -33,6 +35,7 @@ export const cartSlice = createSlice({
           }
         }
       }) 
+      localStorage.setItem("cart",JSON.stringify(state.cartItem))
     },
     removeBtn:(state,action)=>{
       state.cartItem.map((item,index)=>{
@@ -42,6 +45,7 @@ export const cartSlice = createSlice({
         }
         
       })
+      localStorage.setItem("cart",JSON.stringify(state.cartItem))
       
 
     }

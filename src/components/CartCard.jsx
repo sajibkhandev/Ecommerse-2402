@@ -5,6 +5,7 @@ import Flex from './Flex';
 import { BsArrowRepeat, BsCartPlus, BsHeart } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { addtocart } from '../slices/cartSlice';
+import { Link } from 'react-router-dom';
 
 const CartCard = ({ title, price, discountPercentage = 'New', image }) => {
 
@@ -45,13 +46,15 @@ const CartCard = ({ title, price, discountPercentage = 'New', image }) => {
           </Flex>
         </div>
       </div>
-      <Flex className="justify-between pb-3 pt-6">
-        <h3 className="line-clamp-1 font-dm text-xl font-bold text-[#262626]">
-          {title}
-        </h3>
-        <p className="font-dm text-base font-normal text-[#767676]">{price}</p>
-      </Flex>
-      <p className="font-dm text-base font-normal text-[#767676]">Black</p>
+     <Link to={`/products/${title}`}>
+        <Flex className="justify-between pb-3 pt-6">
+            <h3 className="line-clamp-1 font-dm text-xl font-bold text-[#262626]">
+              {title}
+            </h3>
+            <p className="font-dm text-base font-normal text-[#767676]">{price}</p>
+          </Flex>
+          <p className="font-dm text-base font-normal text-[#767676]">Black</p>
+     </Link>
     </div>
   );
 };

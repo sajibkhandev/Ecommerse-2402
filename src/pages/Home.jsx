@@ -20,6 +20,7 @@ import Slider from 'react-slick';
 import NextArrow from '../components/NextArrow';
 import PrevArrow from '../components/PrevArrow';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   let [allProduct, setAllProduct] = useState([]);
@@ -138,6 +139,7 @@ const Home = () => {
           <CommonHeading className="pb-12" text="Special Offers" />
           <Flex className="gap-x-10">
             {allProduct.map((item, index) => (
+            
               <CartCard
                 key={index}
                 title={item.title}
@@ -145,6 +147,7 @@ const Home = () => {
                 image={item.thumbnail}
                 discountPercentage={item.discountPercentage + ' %'}
               />
+             
             ))}
           </Flex>
         </Container>

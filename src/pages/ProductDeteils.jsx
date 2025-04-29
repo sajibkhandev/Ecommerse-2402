@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from '../components/Container'
 import Flex from '../components/Flex'
 import Image from '../components/Image'
@@ -7,8 +7,15 @@ import ProductOne from '../assets/product1.png'
 import { IoIosStar } from 'react-icons/io'
 import Button from '../components/Button'
 import { FaPlus } from 'react-icons/fa'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
 const ProductDeteils = () => {
+
+  let data=useParams()
+
+  let [allProduct, setAllProduct] = useState([]);
+  
   let [conditon1,setCondition1]=useState(false)
   let [conditon2,setCondition2]=useState(false)
   let [conditon3,setCondition3]=useState(false)
@@ -30,17 +37,30 @@ const ProductDeteils = () => {
   let handleStar5=()=>{
     setCondition5(!conditon5)
   }
- 
+  useEffect(() => {
+    async function allData() {
+      let data = await axios.get(
+        'https://dummyjson.com/products/?skip=50&limit=4',
+      );
+      setAllProduct(data.data.products);
+    }
+    allData();
+  }, []);
+
+  
+  console.log(allProduct);
   
   return (
    <section className='pt-[150px] pb-12'>
     <Container>
-    <Flex className='flex-wrap gap-10 '>
-      <Image src={ProductOne}/>
-      <Image src={ProductOne}/>
-      <Image src={ProductOne}/>
-      <Image src={ProductOne}/>
-    </Flex>
+    <div>
+      {
+        allProduct.map(item=>(
+          data.title==item.title &&
+          <Image className='w-[400px] h-[500px]' src={item.thumbnail}/>
+        ))
+      }
+    </div>
 
     <CommonHeading className='pt-12 pb-4' text='Product'/>
     <Flex className='gap-x-6 items-center pb-4'>
